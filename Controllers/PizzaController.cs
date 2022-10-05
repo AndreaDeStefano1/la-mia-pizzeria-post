@@ -15,20 +15,14 @@ namespace la_mia_pizzeria.Controllers
 
         public IActionResult Index()
         {
-            List<Pizza> pizzaList = new List<Pizza>();
-            pizzaList.Add(new Pizza() { Id = 1, Name = "Margherita", Description = "Pomodoro, mozzarella, basilico", Image = "/img/pizza.jpg", Price = 4.5 });
-            pizzaList.Add(new Pizza() { Id = 2, Name = "Divola", Description = "Pomodoro, salame, mozzarella", Image = "/img/pizza.jpg", Price = 5 });
-            pizzaList.Add(new Pizza() { Id = 3, Name = "marinara", Description = "Pomodoro, mozzarella, basilico", Image = "/img/pizza.jpg", Price = 3.5 });
-            return View(pizzaList);
+            
+            return View();
         }
         public IActionResult Show(int id)
         {
-            List<Pizza> pizzaList = new List<Pizza>();
-            pizzaList.Add(new Pizza() { Id = 1, Name = "Margherita", Description = "Pomodoro, mozzarella, basilico", Image = "/img/pizza.jpg", Price = 4.5 });
-            pizzaList.Add(new Pizza() { Id = 2, Name = "Divola", Description = "Pomodoro, salame, mozzarella", Image = "/img/pizza.jpg", Price = 5 });
-            pizzaList.Add(new Pizza() { Id = 3, Name = "marinara", Description = "Pomodoro, mozzarella, basilico", Image = "/img/pizza.jpg", Price = 3.5 });
-            Pizza pizza = pizzaList[id];
-            return View(pizza);
+            
+     
+            return View();
         }
         public IActionResult Privacy()
         {
