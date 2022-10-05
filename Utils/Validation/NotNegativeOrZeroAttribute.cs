@@ -6,7 +6,7 @@ namespace la_mia_pizzeria.Utils.Validation
     {
         protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
         {
-            int fieldValue = (int)value;
+            double fieldValue = (double)value;
             if (fieldValue <= 0)
             {
                 return new ValidationResult("Il numero non puo essere minore o uguale a zero");
