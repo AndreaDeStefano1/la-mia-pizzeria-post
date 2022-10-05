@@ -32,7 +32,7 @@
                                 <td>@pizza.Description</td>
                                 <td><img src="@pizza.Image" /></td>
                                 <td>@pizza.Price €</td>
-                                <td><a class="btn btn-warning" href="@Url.Action("Show", "Pizza",new { Id = pizza.Id - 1 } )">Vedi</a></td>
+                                <td><a class="btn btn-warning" href="@Url.Action("Show", "Pizza",new { Id = pizza.Id } )">Vedi</a></td>
                             </tr>
                         }
 

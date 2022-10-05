@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics;
 
+
 namespace la_mia_pizzeria.Controllers
 {
     public class PizzaController : Controller
@@ -27,9 +28,13 @@ namespace la_mia_pizzeria.Controllers
         }
         public IActionResult Show(int id)
         {
-            
-     
-            return View();
+            using (PizzaContext db = new PizzaContext())
+            {
+                Pizza p = db.Pizzas.Where(s => s.Id == id).First<Pizza>();
+                return View(p);
+
+            }
+
         }
         public IActionResult Create()
         {
